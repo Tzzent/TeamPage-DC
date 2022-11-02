@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "PT Serif", sans-serif;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: .2rem;
+}
+
+.main {
+    margin: 30px 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head {
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.we-are {
+    width: 450px;
+    letter-spacing: .2rem;
+    line-height: 2rem;
+}
+
+.team-page {
+    margin-top: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px 100px;
+
+}
+
+.person:nth-child(3n+2) {
+    margin-top: 80px;
+}
+
+img {
+    width: 100%;
+}
+
+.container-img {
+    position: relative;
+}
+
+h4 {
+    position: absolute;
+    writing-mode: vertical-lr;
+    top: 0;
+    right: -20px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+.credit {
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.credit a,
+.credit p {
+    color: gray;
+    text-decoration: none;
+}
+
+.credit a:hover {
+    color: red;
+}
+
+@media (max-width: 1340px) {
+    .team-page {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .person:nth-child(3n+2) {
+        margin-top: 0;
+    }
+
+    .person:nth-child(even) {
+        margin-top: 100px;
+    }
+
+    .head {
+        flex-direction: column;
+        gap: 80px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main {
+        margin: auto;
+        padding: 0 80px;
+    }
+
+}
+
+@media(max-width: 550px) {
+    .team-page {
+        grid-template-columns: 1fr;
+    }
+
+    .person:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .credit {
+        font-size: 15px;
+    }
+}
